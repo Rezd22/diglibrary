@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/css/books.css">
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <title>PAA Book Listing</title>
+</head>
+<body>
+  <main>
+    <div>
+      <h1>Book Listing</h1>
+      <form method="post" action="/add-book">
+        <button type="submit">Add Buku</button>
+      </form>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Release Year</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{range .Data}}
+        <tr>
+          <td>{{.Title}}</td>
+          <td>{{.Author}}</td>
+          <td>{{.ReleaseYear}}</td>
+          <td><form method="post" action="/edit-book/{{.Id}}">
+              <button type="submit">update</button>
+            </form>
+              <form method="post" action="/delete-book/{{.Id}}">
+                <button type="submit">delete</button>
+              </form>
+          </td>
+        </tr>
+        {{end}}
+      </tbody>
+    </table>
+  </main>
+  <p class="message">{{.Message}}</p>
+</body>
+</html>

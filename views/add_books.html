@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/css/update.css">
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<title>PAA Add Book Page</title>
+</head>
+<body>
+	<main>
+		<div>
+			<h1>Add Book</h1>
+		</div>
+		<form method="post" action="/book">
+			<label for="title">Title:</label>
+			<input type="text" id="title" name="title" required>
+			<label for="author">Author:</label>
+			<input type="text" id="author" name="author" required>
+			<label for="release_year">Release Year:</label>
+			<input type="text" id="release_year" name="release_year" required>
+			<label for="description">Description:</label>
+			<input type="text" id="description" name="description" required>
+			<button type="submit">Add Book</button>
+		</form>
+	</main>
+</body>
+</html>
