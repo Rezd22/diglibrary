@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Perpustakaan Online</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Daftar Buku</h2>
+      <div class="book-list">
+        {{range .Books}}
+        <div class="book">
+          <img src="{{.ImageURL}}" alt="{{.Title}}" />
+          <h3>{{.Title}}</h3>
+          <button class="borrow-button">Pinjam</button>
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </body>
+</html>

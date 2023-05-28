@@ -1,91 +1,102 @@
 body {
-    background-color: #786fa6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins';
+  background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)), url(/static/image/bg-1.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins';
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
 }
 
-h1 {
-    margin: 0px;
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-main {
-    margin-top: 170px;
-    width: 35%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    border-radius: 15px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(4, 4, 4, 0.1);
+  position: relative;
 }
 
-div {
-    width: 100%;
-    margin-bottom: 20px;
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  color: #574b90;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
 }
 
-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.back-button:hover {
+  color: #786fa6;
 }
 
-form > div {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    margin-top: 10px;
+.container h1 {
+  margin: 0;
+  text-align: center;
+  color: #574b90;
+  margin-bottom: 20px;
+  font-size: 50px;
 }
 
-form > div > div {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
+.container form {
+  display: flex;
+  flex-direction: column;
 }
 
-form > div > div > label {
-    font-size: 18px;
+.container label {
+  font-size: 18px;
+  color: #574b90;
+  margin-bottom: 5px;
 }
 
-form > div > div > input {
-    margin-top: 10px;
-    padding: 8px;
-    border-radius: 7px;
-    border: 1px solid #574b90;
-    color: #574b90;
+.container input[type='text'],
+.container input[type='password'] {
+  padding: 8px;
+  border-radius: 7px;
+  border: 1px solid #574b90;
+  color: #574b90;
+  margin-bottom: 10px;
 }
 
-button {
-    padding: 8px;
-    font-size: 18px;
-    border-radius: 7px;
-    border: 1px solid;
-    background-color: #786fa6;
-    color: white;
-    cursor: pointer;
+.container button {
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 7px;
+  border: none;
+  background-color: #786fa6;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-button:hover {
-    background-color: white;
-    color: #574b90;
-    border: 1px solid #574b90;
+.container button:hover {
+  background-color: #574b90;
 }
 
-p {
-    margin-top: 20px;
-    margin-bottom: 0px;
+.container p {
+  margin-top: 20px;
+  text-align: center;
+  color: #574b90;
 }
 
-a {
-    color: #574b90;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.message {
-    color: #ea8685;
+.container a {
+  color: #574b90;
+  text-decoration: none;
 }
